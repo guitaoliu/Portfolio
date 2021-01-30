@@ -1,9 +1,10 @@
 import React from 'react'
-import { Paper } from '@material-ui/core'
+import { Container, Paper } from '@material-ui/core'
 import { Email, GitHub, Twitter } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles'
 
 import User from './components/User'
+import Footer from './components/Footer'
 import icon from './assets/icon.jpeg'
 
 const socials = [
@@ -28,10 +29,12 @@ const socials = [
 ]
 
 const useStyle = makeStyles((theme) => ({
-  paper: {
+  root: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+  },
+  paper: {
     maxWidth: 700,
     margin: 'auto',
     padding: theme.spacing(5, 2),
@@ -40,10 +43,14 @@ const useStyle = makeStyles((theme) => ({
 
 const App = () => {
   const classes = useStyle()
+  const name = 'Gtliu'
   return (
-    <Paper className={classes.paper} elevation={5}>
-      <User name="Gtliu" icon={icon} socials={socials} />
-    </Paper>
+    <Container className={classes.root}>
+      <Paper className={classes.paper} elevation={5}>
+        <User name={name} icon={icon} socials={socials} />
+      </Paper>
+      <Footer name={name} />
+    </Container>
   )
 }
 export default App

@@ -17,7 +17,7 @@ const socials = [
   {
     id: 2,
     site: 'Twitter',
-    link: 'https://twitter.com/gtliu52',
+    link: 'https://twitter.com/gtliuu',
     icon: <Twitter fontSize="small" />,
   },
   {

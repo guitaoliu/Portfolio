@@ -6,7 +6,7 @@ import SocialBadge from './SocialBadge'
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(1),
+    margin: theme.spacing(1, 0),
     '& > *': {
       margin: theme.spacing(0.5),
     },

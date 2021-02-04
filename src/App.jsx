@@ -33,6 +33,7 @@ const useStyle = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    alignContent: 'center',
   },
   paper: {
     maxWidth: 700,

@@ -13,12 +13,12 @@ const useStyle = makeStyles((theme) => ({
   },
   icon: {
     margin: 'auto',
-    maxWidth: '50%',
+    maxWidth: '60%',
     display: 'block',
     borderRadius: '50%',
   },
   info: {
-    marginTop: theme.spacing(1),
+    margin: theme.spacing(1, 0),
   },
 }))
 
@@ -32,10 +32,10 @@ const User = (props) => {
       justify="center"
       alignItems="center"
       spacing={2}>
-      <Grid item xs>
+      <Grid item xs={10} sm={4}>
         <img className={classes.icon} alt={name} src={icon} />
       </Grid>
-      <Grid item xs>
+      <Grid item xs={10} sm={8}>
         <Typography variant="h4">@{name}</Typography>
         <Typography variant="body1">
           Student major in Automation at Xi&apos;an Jiaotong University,

@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyle = makeStyles((theme) => ({
   foot: {
-    margin: theme.spacing(1, 'auto'),
+    margin: theme.spacing(0, 'auto', 1),
   },
 }))
 
@@ -14,7 +14,7 @@ const Footer = (props) => {
   const { name } = props
   const classes = useStyle()
   return (
-    <Typography variant="subtitle2" className={classes.foot} color="">
+    <Typography variant="subtitle2" className={classes.foot}>
       Made with <Favorite color="error" fontSize="inherit" /> by{' '}
       <Link href="/">{name}</Link>
     </Typography>

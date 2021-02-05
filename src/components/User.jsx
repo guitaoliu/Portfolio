@@ -6,10 +6,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import Social from './Social/Social'
 
 const useStyle = makeStyles((theme) => ({
-  paper: {
-    margin: 'auto',
-    maxWidth: 600,
-    padding: theme.spacing(1),
+  root: {
+    [theme.breakpoints.only('xs')]: {
+      textAlign: 'center',
+    },
   },
   icon: {
     margin: 'auto',
@@ -31,7 +31,8 @@ const User = (props) => {
       direction="row"
       justify="center"
       alignItems="center"
-      spacing={2}>
+      spacing={2}
+      className={classes.root}>
       <Grid item xs={10} sm={4}>
         <img className={classes.icon} alt={name} src={icon} />
       </Grid>

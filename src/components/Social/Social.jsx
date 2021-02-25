@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { makeStyles } from '@material-ui/core'
 
 import SocialBadge from './SocialBadge'
@@ -13,9 +14,8 @@ const useStyle = makeStyles((theme) => ({
   },
 }))
 
-function Social(props) {
+const Social = ({ socials }) => {
   const classes = useStyle()
-  const { socials } = props
   return (
     <div className={classes.root}>
       {socials.map((social) => (

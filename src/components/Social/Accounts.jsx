@@ -1,5 +1,6 @@
-import { Email, GitHub, Twitter } from '@material-ui/icons'
 import React from 'react'
+
+import { Email, GitHub, Twitter } from '@material-ui/icons'
 
 export default [
   {

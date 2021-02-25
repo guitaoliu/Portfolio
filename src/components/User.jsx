@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { Grid, Typography, Link } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { blue, grey } from '@material-ui/core/colors'
+
 import Social from './Social/Social'
 
 const useStyle = makeStyles((theme) => ({
@@ -31,7 +33,6 @@ const useStyle = makeStyles((theme) => ({
     color: grey[600],
   },
   xjtuLink: {
-    padding: theme.spacing(0.5),
     color: blue[600],
     '&:hover': {
       color: blue[900],

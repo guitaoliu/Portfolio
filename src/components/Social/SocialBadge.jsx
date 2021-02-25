@@ -3,19 +3,16 @@ import PropTypes from 'prop-types'
 
 import Chip from '@material-ui/core/Chip'
 
-const SocialBadge = (props) => {
-  const { site, icon, link } = props
-  return (
-    <Chip
-      avatar={icon}
-      label={site}
-      component="a"
-      href={link}
-      clickable
-      variant="outlined"
-    />
-  )
-}
+const SocialBadge = ({ site, icon, link }) => (
+  <Chip
+    avatar={icon}
+    label={site}
+    component="a"
+    href={link}
+    clickable
+    variant="outlined"
+  />
+)
 
 SocialBadge.propTypes = {
   site: PropTypes.string.isRequired,

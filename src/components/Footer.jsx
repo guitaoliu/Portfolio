@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { Typography, Link } from '@material-ui/core'
 import { Favorite } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles'
@@ -14,8 +15,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }))
 
-const Footer = (props) => {
-  const { name } = props
+const Footer = ({ name }) => {
   const classes = useStyle()
   return (
     <Typography variant="subtitle2" className={classes.foot}>

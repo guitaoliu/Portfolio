@@ -1,10 +1,11 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import { Paper } from '@material-ui/core'
 import PropTypes from 'prop-types'
 
-import accounts from '../components/Social/Accounts'
+import { makeStyles } from '@material-ui/core/styles'
+import { Paper } from '@material-ui/core'
+
 import User from '../components/User'
+import accounts from '../components/Social/Accounts'
 import icon from '../assets/icon.jpeg'
 
 const useStyle = makeStyles((theme) => ({

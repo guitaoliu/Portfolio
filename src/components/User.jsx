@@ -17,7 +17,7 @@ const useStyle = makeStyles((theme) => ({
     display: 'block',
     borderRadius: '50%',
     [theme.breakpoints.only('xs')]: {
-      maxHeight: '20%',
+      maxWidth: '50%',
     },
   },
   info: {
@@ -57,15 +57,15 @@ const User = ({ name, icon, socials }) => {
       <Grid item xs={10} sm={8}>
         <div className={classes.info}>
           <Typography variant="body1" className={classes.info}>
-            Student major in Automation at{' '}
+            Current undergraduate student majors in Automation at{' '}
             <Link href="http://www.xjtu.edu.cn" className={classes.xjtuLink}>
               Xi&apos;an Jiaotong University,
             </Link>{' '}
             applying for graduate school in Computer Science.
           </Typography>
           <Typography variant="body1" className={classes.info}>
-            Have projects written with Python, Flask, OpenCV. Learn to code with
-            JavaScript and React.js. And add some Golang.
+            Code for life. Have projects made with Python, Flask, OpenCV. Learn
+            to code with JavaScript and React.js. And add some Golang.
           </Typography>
           <div className={classes.skills}>
             <Typography variant="body2">zh-CN & en-US</Typography>

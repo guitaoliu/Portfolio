@@ -1,32 +1,11 @@
 import React from 'react'
 import { Container, Paper } from '@material-ui/core'
-import { Email, GitHub, Twitter } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles'
 
+import socials from './components/Social/Accounts'
 import User from './components/User'
 import Footer from './components/Footer'
 import icon from './assets/icon.jpeg'
-
-const socials = [
-  {
-    id: 1,
-    site: 'GitHub',
-    link: 'https://github.com/guitaoliu',
-    icon: <GitHub fontSize="small" />,
-  },
-  {
-    id: 2,
-    site: 'Twitter',
-    link: 'https://twitter.com/gtliuu',
-    icon: <Twitter fontSize="small" />,
-  },
-  {
-    id: 3,
-    site: 'Gmail',
-    link: 'mailto:gtliu52@gmail.com',
-    icon: <Email fontSize="small" />,
-  },
-]
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -38,7 +17,11 @@ const useStyle = makeStyles((theme) => ({
   paper: {
     maxWidth: 700,
     margin: 'auto',
-    padding: theme.spacing(5, 1),
+    padding: theme.spacing(5, 5),
+    [theme.breakpoints.only('xs')]: {
+      margin: theme.spacing('auto', 4),
+      padding: theme.spacing(5, 1),
+    },
   },
 }))
 

@@ -46,7 +46,7 @@ const Profile = () => {
         <Text>
           He can be found at{' '}
           <Link
-            href="https://twitter.com/gtliu52"
+            href="https://twitter.com/gtliuu"
             isExternal
             color="#08a0e9"
             _hover={{ textDecoration: 'underline' }}>

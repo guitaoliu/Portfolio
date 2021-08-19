@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Text, Link, Icon } from '@chakra-ui/react'
 import { AiFillHeart } from 'react-icons/ai'
 

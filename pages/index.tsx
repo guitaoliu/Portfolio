@@ -12,8 +12,7 @@ const Home: NextPage = () => {
       maxW="75%"
       m="auto"
       alignItems="center"
-      justifyContent="space-between"
-    >
+      justifyContent="space-between">
       <Head>
         <title>Guitao Liu</title>
       </Head>

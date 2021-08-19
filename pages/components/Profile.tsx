@@ -9,13 +9,13 @@ const Profile = () => {
       justifyContent="center"
       alignItems="center"
       spacing={5}>
-      <VStack m={5}>
+      <VStack m={5} maxW="50%">
         <Img src={avatar.src} alt="Guitao Liu Avatar" w={48} />
         <Text as="b" fontSize="2xl">
           Guitao
         </Text>
       </VStack>
-      <VStack w={{ base: 'full', md: '50%' }} alignItems="flex-start">
+      <VStack maxW={{ base: 'full', md: '70%' }} alignItems="flex-start">
         {' '}
         <Text>
           He is currently a M.Eng. student in ELectrical and Computer

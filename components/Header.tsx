@@ -1,6 +1,6 @@
 import { HStack, Link } from '@chakra-ui/react'
 
-const Header = () => {
+const Navbar = () => {
   return (
     <HStack w="full" alignItems="center" justifyContent="center" spacing={10}>
       <Link href="/" textDecoration="underline" color="gray">
@@ -19,4 +19,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Navbar

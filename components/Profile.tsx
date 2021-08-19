@@ -1,6 +1,6 @@
 import { Flex, VStack, Text, Link, Img } from '@chakra-ui/react'
 
-import avatar from '../assets/icon.png'
+import avatar from '../public/avatar.png'
 
 const Profile = () => {
   return (

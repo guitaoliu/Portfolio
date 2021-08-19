@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { VStack } from '@chakra-ui/react'
 
-import Profile from './components/Profile'
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Profile from '../components/Profile'
+import Footer from '../components/Navbar'
+import Navbar from '../components/Header'
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         pt={5}
         alignItems="center"
         justifyContent="space-between">
-        <Header />
+        <Navbar />
         <Profile />
         <Footer />
       </VStack>

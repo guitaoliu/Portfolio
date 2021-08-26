@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { VStack } from '@chakra-ui/react'
 
 import Profile from '../components/Profile'
-import Footer from '../components/Navbar'
-import Navbar from '../components/Header'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 const Home: NextPage = () => {
   return (

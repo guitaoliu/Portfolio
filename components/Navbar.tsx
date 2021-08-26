@@ -1,9 +1,11 @@
-import { HStack, Link } from '@chakra-ui/react'
+import { HStack, Link, IconButton, useColorMode } from '@chakra-ui/react'
+import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
-    <HStack w="full" alignItems="center" justifyContent="center" spacing={10}>
-      <Link href="/" textDecoration="underline" color="gray">
+    <HStack w="full" alignItems="center" justifyContent="center" spacing={5}>
+      <Link href="/" textDecoration="underline">
         Home
       </Link>
       <Link href="https://blog.gtliu.com" isExternal>
@@ -15,6 +17,21 @@ const Navbar = () => {
         GPG
       </Link>
       <Link href="/">Resume</Link>
+      {colorMode === 'dark' ? (
+        <IconButton
+          aria-label="Turn into light mode"
+          icon={<SunIcon />}
+          variant="ghost"
+          onClick={toggleColorMode}
+        />
+      ) : (
+        <IconButton
+          aria-label="Turn into dark mode"
+          icon={<MoonIcon />}
+          variant="ghost"
+          onClick={toggleColorMode}
+        />
+      )}
     </HStack>
   )
 }

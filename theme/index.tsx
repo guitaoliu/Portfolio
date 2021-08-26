@@ -5,6 +5,8 @@ const theme = extendTheme({
     body: 'Roboto, sans-serif',
     mono: 'monospace',
   },
+  initialColorMode: 'light',
+  useSystemColorMode: false,
 })
 
 export default theme

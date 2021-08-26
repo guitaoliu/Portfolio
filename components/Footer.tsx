@@ -1,15 +1,8 @@
-import { Text, Link, Icon } from '@chakra-ui/react'
-import { AiFillHeart } from 'react-icons/ai'
+import { Text } from '@chakra-ui/react'
 
 const Footer = () => {
-  return (
-    <Text>
-      Made with {<Icon as={AiFillHeart} color="red" />} by{' '}
-      <Link colorScheme="cyan" href="https://github.com/guitaoliu">
-        Guitao
-      </Link>
-    </Text>
-  )
+  const currentYear = new Date().getFullYear()
+  return <Text py={2}>Guitao Liu © 2019 - {currentYear}</Text>
 }
 
 export default Footer

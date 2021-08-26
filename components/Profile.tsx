@@ -1,4 +1,11 @@
-import { Flex, VStack, Text, Link, Img } from '@chakra-ui/react'
+import {
+  Flex,
+  VStack,
+  Text,
+  Link,
+  Img,
+  useColorModeValue,
+} from '@chakra-ui/react'
 
 import avatar from '../public/avatar.png'
 
@@ -10,30 +17,34 @@ const Profile = () => {
       alignItems="center"
       spacing={5}>
       <VStack m={5} maxW="50%">
-        <Img src={avatar.src} alt="Guitao Liu Avatar" w={48} />
-        <Text as="b" fontSize="2xl">
+        <Img
+          src={avatar.src}
+          alt="Guitao Liu Avatar"
+          w={48}
+          borderRadius="full"
+        />
+        <Text as="b" fontSize="2xl" letterSpacing="wider">
           Guitao
         </Text>
       </VStack>
       <VStack maxW={{ base: 'full', md: '70%' }} alignItems="flex-start">
         {' '}
         <Text>
-          He is currently a M.Eng. student in ELectrical and Computer
+          He is currently a M.Eng. student in Electrical and Computer
           Engineering at{' '}
           <Link
             href="https://uottawa.ca"
             isExternal
             display="inline"
-            color="#84001a"
+            color="red.600"
             _hover={{ textDecoration: 'underline' }}>
             uOttawa
           </Link>
           .
         </Text>
         <Text>
-          He codes for fun and life. He has projects written with Flask,
-          Electron, OpenCV and more. He is acquainted with Python, JavaScript
-          and Matlab.
+          He has projects written with Flask, Electron, OpenCV and more. He is
+          acquainted with Python, JavaScript and Matlab.
         </Text>
         <Text>
           He is now learn to code with Golang. He is seeking knowledge of
@@ -48,7 +59,7 @@ const Profile = () => {
           <Link
             href="https://twitter.com/gtliuu"
             isExternal
-            color="#08a0e9"
+            color="blue.400"
             _hover={{ textDecoration: 'underline' }}>
             Twitter
           </Link>
@@ -56,7 +67,6 @@ const Profile = () => {
           <Link
             href="https://github.com/guitaoliu"
             isExternal
-            color="#211F1F"
             _hover={{ textDecoration: 'underline' }}>
             GitHub
           </Link>{' '}
@@ -64,7 +74,7 @@ const Profile = () => {
           <Link
             href="https://www.linkedin.com/in/guitao-liu-a891721a2/"
             isExternal
-            color="#0e76a8"
+            color="cyan.500"
             _hover={{ textDecoration: 'underline' }}>
             Linkedin
           </Link>
@@ -73,7 +83,7 @@ const Profile = () => {
             Personal
           </Link>{' '}
           or{' '}
-          <Link href="mailto:guitao.liu@uottawa.ca" color="teal.400">
+          <Link href="mailto:guitao.liu@uottawa.ca" color="teal.500">
             School
           </Link>{' '}
           email.

@@ -16,7 +16,7 @@ const Navbar = () => {
         isExternal>
         GPG
       </Link>
-      <Link href="/">Resume</Link>
+      <Link href="/Resume.pdf">Resume</Link>
       {colorMode === 'dark' ? (
         <IconButton
           aria-label="Turn into light mode"

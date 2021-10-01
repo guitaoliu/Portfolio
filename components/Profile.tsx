@@ -1,11 +1,4 @@
-import {
-  Flex,
-  VStack,
-  Text,
-  Link,
-  Img,
-  useColorModeValue,
-} from '@chakra-ui/react'
+import { Flex, VStack, Text, Link, Img } from '@chakra-ui/react'
 
 import avatar from '../public/avatar.png'
 
@@ -15,7 +8,8 @@ const Profile = () => {
       direction={{ base: 'column', md: 'row' }}
       justifyContent="center"
       alignItems="center"
-      spacing={5}>
+      spacing={5}
+    >
       <VStack m={5} maxW="50%">
         <Img
           src={avatar.src}
@@ -30,29 +24,33 @@ const Profile = () => {
       <VStack maxW={{ base: 'full', md: '70%' }} alignItems="flex-start">
         {' '}
         <Text>
-          He is currently a M.Eng. student in Electrical and Computer
+          He is currently an M.Eng. student in Electrical and Computer
           Engineering at{' '}
           <Link
             href="https://uottawa.ca"
             isExternal
             display="inline"
             color="red.600"
-            _hover={{ textDecoration: 'underline' }}>
+            _hover={{ textDecoration: 'underline' }}
+          >
             uOttawa
           </Link>
           .
         </Text>
         <Text>
-          He has projects written with Flask, Electron, OpenCV and more. He is
-          acquainted with Python, JavaScript and Matlab.
+          He has projects written with Flask, Electron, React, OpenCV and more.
+          He is acquainted with Python, JavaScript and Matlab.
         </Text>
         <Text>
-          He is now learn to code with Golang. He is seeking knowledge of
-          distributed system and cloud infra.
+          He is now learning to code with Golang. He is seeking knowledge of
+          distributed systems and cloud infra. He is now learning to code with
+          Golang. He is seeking knowledge of distributed systems and cloud
+          infra.
         </Text>
         <Text>
           His first language is Chinese. He can also communicate in English. He
-          tries to add some French as well.
+          tries to add some French as well. His first language is Chinese. He
+          can also communicate in English. He tries to add some French as well.
         </Text>
         <Text>
           He can be found at{' '}
@@ -60,14 +58,16 @@ const Profile = () => {
             href="https://twitter.com/gtliuu"
             isExternal
             color="blue.400"
-            _hover={{ textDecoration: 'underline' }}>
+            _hover={{ textDecoration: 'underline' }}
+          >
             Twitter
           </Link>
           ,{' '}
           <Link
             href="https://github.com/guitaoliu"
             isExternal
-            _hover={{ textDecoration: 'underline' }}>
+            _hover={{ textDecoration: 'underline' }}
+          >
             GitHub
           </Link>{' '}
           and{' '}
@@ -75,7 +75,8 @@ const Profile = () => {
             href="https://www.linkedin.com/in/guitao-liu-a891721a2/"
             isExternal
             color="cyan.500"
-            _hover={{ textDecoration: 'underline' }}>
+            _hover={{ textDecoration: 'underline' }}
+          >
             Linkedin
           </Link>
           . He is also reachable via{' '}

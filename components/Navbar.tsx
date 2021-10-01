@@ -13,7 +13,8 @@ const Navbar = () => {
       </Link>
       <Link
         href="https://keys.openpgp.org/search?q=C5905C14A4321A938272A2E2330D765C278644FD"
-        isExternal>
+        isExternal
+      >
         GPG
       </Link>
       <Link href="/Resume.pdf" isExternal>

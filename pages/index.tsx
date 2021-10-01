@@ -18,7 +18,8 @@ const Home: NextPage = () => {
         m="auto"
         pt={5}
         alignItems="center"
-        justifyContent="space-between">
+        justifyContent="space-between"
+      >
         <Navbar />
         <Profile />
         <Footer />

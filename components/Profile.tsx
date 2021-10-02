@@ -72,7 +72,7 @@ const Profile = () => {
           </Link>{' '}
           and{' '}
           <Link
-            href="https://www.linkedin.com/in/guitao-liu-a891721a2/"
+            href="https://www.linkedin.com/in/guitaoliu/"
             isExternal
             color="cyan.500"
             _hover={{ textDecoration: 'underline' }}

@@ -1,25 +1,34 @@
-import { HStack, Link, IconButton, useColorMode } from '@chakra-ui/react'
+import Link from 'next/link'
+import {
+  HStack,
+  Link as CLink,
+  IconButton,
+  useColorMode,
+} from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <HStack w="full" alignItems="center" justifyContent="center" spacing={5}>
-      <Link href="/" textDecoration="underline">
-        Home
+      <Link href="/" passHref>
+        <CLink textDecoration="underline">Home</CLink>
       </Link>
-      <Link href="https://blog.gtliu.com" isExternal>
+      <CLink href="https://blog.gtliu.com" isExternal>
         Blog
+      </CLink>
+      <Link href="/leetcode" passHref>
+        <CLink>LeetCode</CLink>
       </Link>
-      <Link
+      <CLink
         href="https://keys.openpgp.org/search?q=C5905C14A4321A938272A2E2330D765C278644FD"
         isExternal
       >
         GPG
-      </Link>
-      <Link href="/Resume.pdf" isExternal>
+      </CLink>
+      <CLink href="/Resume.pdf" isExternal>
         Resume
-      </Link>
+      </CLink>
       {colorMode === 'dark' ? (
         <IconButton
           aria-label="Turn into light mode"

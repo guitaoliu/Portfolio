@@ -238,3 +238,4 @@ build
 .eslintcache
 .idea/
 .next
+.env

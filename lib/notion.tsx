@@ -22,11 +22,11 @@ type Tag = {
 
 export const getLeetCodeSolutions = async (): Promise<LeetCodeSolution[]> => {
   let solutions = []
-  let cursor = undefined
+  let cursor: string = ''
   while (true) {
     const { results, next_cursor } = await notion.databases.query({
       database_id: databaseId,
-      start_cursor: cursor,
+      start_cursor: cursor === '' ? undefined : cursor,
     })
     solutions.push(...results)
     if (!next_cursor) {
@@ -36,11 +36,11 @@ export const getLeetCodeSolutions = async (): Promise<LeetCodeSolution[]> => {
   }
   return solutions.map((solution) => ({
     id: solution.id,
-    name: solution.properties['Name'].title[0].text.content,
-    number: solution.properties['No.'].number,
-    date: solution.properties['Date'].date?.start || '',
-    tags: solution.properties['Tags'].multi_select,
-    difficulty: solution.properties['Difficulty'].select?.name || '',
+    name: (solution.properties['Name'] as any).title[0].text.content,
+    number: (solution.properties['No.'] as any).number,
+    date: (solution.properties['Date'] as any).date?.start || '',
+    tags: (solution.properties['Tags'] as any).multi_select,
+    difficulty: (solution.properties['Difficulty'] as any).select?.name || '',
     url: solution.url,
   }))
 }

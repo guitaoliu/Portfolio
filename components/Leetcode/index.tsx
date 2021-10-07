@@ -1,59 +1,65 @@
+import { useMemo, useState } from 'react'
 import {
   HStack,
-  Text,
+  VStack,
   Table,
   Thead,
   Tbody,
   Tr,
   Th,
-  Td,
-  Link,
+  Text,
 } from '@chakra-ui/react'
-import { LeetCodeSolution } from '../../lib/notion'
+import type { LeetCodeSolution } from '../../lib/notion'
+import LeetCodeItem from './item'
 
 type LeetCodeTableProps = {
   solutions: LeetCodeSolution[]
 }
-
 const LeetCodeTable = ({ solutions }: LeetCodeTableProps) => {
+  const [page, setPage] = useState<number>(0)
+
   solutions.sort((a, b) => b.number - a.number)
+  const ranges = useMemo<string[]>(() => {
+    const maxNumber = Math.ceil(solutions[0].number / 100)
+    const ranges = new Array<string>(maxNumber + 1)
+    for (let i = 0; i < maxNumber; i++) {
+      ranges[i] = `${i * 100 + 1}~${(i + 1) * 100}`
+    }
+    return ranges
+  }, [solutions])
+
   return (
-    <Table size="sm" w="2/3" m="auto">
-      <Thead>
-        <Tr>
-          <Th>Number</Th>
-          <Th>Name</Th>
-          <Th>Difficult</Th>
-          <Th>Tags</Th>
-        </Tr>
-      </Thead>
-      <Tbody>
-        {solutions.map((s: LeetCodeSolution) => (
-          <Tr key={s.id}>
-            <Td isNumeric>{s.number}</Td>
-            <Td>
-              {
-                <Link
-                  href={s.url.replace('www.notion.so', 'gtliu52.notion.site')}
-                  textDecoration="underline"
-                  isExternal
-                >
-                  {s.name}
-                </Link>
-              }
-            </Td>
-            <Td>{s.difficulty}</Td>
-            <Td>
-              {s.tags.map((tag) => (
-                <HStack key={tag.id}>
-                  <Text p={1}>{tag.name}</Text>
-                </HStack>
-              ))}
-            </Td>
-          </Tr>
+    <VStack>
+      <HStack>
+        <Text>Problems: </Text>
+        {ranges.map((range, index) => (
+          <Text
+            key={index}
+            textDecoration={index === page ? 'underline' : ''}
+            onClick={() => {
+              setPage(index)
+            }}
+          >
+            {range}
+          </Text>
         ))}
-      </Tbody>
-    </Table>
+      </HStack>
+      <Table size="sm" m="auto">
+        <Thead>
+          <Tr>
+            <Th>Number</Th>
+            <Th>Name</Th>
+            <Th>Difficult</Th>
+            <Th>Tags</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {solutions.map((s: LeetCodeSolution) => (
+            <LeetCodeItem key={s.id} leetCodeSolution={s} page={page} />
+          ))}
+        </Tbody>
+      </Table>
+    </VStack>
   )
 }
 

@@ -17,9 +17,6 @@ const Navbar = () => {
       <CLink href="https://blog.gtliu.com" isExternal>
         Blog
       </CLink>
-      <Link href="/leetcode" passHref>
-        <CLink>LeetCode</CLink>
-      </Link>
       <CLink
         href="https://keys.openpgp.org/search?q=C5905C14A4321A938272A2E2330D765C278644FD"
         isExternal

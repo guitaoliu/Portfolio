@@ -8,7 +8,6 @@ const Profile = () => {
       direction={{ base: 'column', md: 'row' }}
       justifyContent="center"
       alignItems="center"
-      spacing={5}
     >
       <VStack m={5} maxW="50%">
         <Img

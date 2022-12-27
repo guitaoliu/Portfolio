@@ -6,30 +6,30 @@ const Profile = () => {
   return (
     <Flex
       direction={{ base: 'column', md: 'row' }}
-      justifyContent="center"
-      alignItems="center"
+      justifyContent='center'
+      alignItems='center'
     >
-      <VStack m={5} maxW="50%">
+      <VStack m={5} maxW='50%'>
         <Img
           src={avatar.src}
-          alt="Guitao Liu Avatar"
+          alt='Guitao Liu Avatar'
           w={48}
-          borderRadius="full"
+          borderRadius='full'
         />
-        <Text as="b" fontSize="2xl" letterSpacing="wider">
+        <Text as='b' fontSize='2xl' letterSpacing='wider'>
           Guitao
         </Text>
       </VStack>
-      <VStack maxW={{ base: 'full', md: '70%' }} alignItems="flex-start">
+      <VStack maxW={{ base: 'full', md: '70%' }} alignItems='flex-start'>
         {' '}
         <Text>
           He is currently an M.Eng. student in Electrical and Computer
           Engineering at{' '}
           <Link
-            href="https://uottawa.ca"
+            href='https://uottawa.ca'
             isExternal
-            display="inline"
-            color="red.600"
+            display='inline'
+            color='red.600'
             _hover={{ textDecoration: 'underline' }}
           >
             uOttawa
@@ -48,22 +48,21 @@ const Profile = () => {
         </Text>
         <Text>
           His first language is Chinese. He can also communicate in English. He
-          tries to add some French as well. His first language is Chinese. He
-          can also communicate in English. He tries to add some French as well.
+          tries to add some French as well.
         </Text>
         <Text>
           He can be found at{' '}
           <Link
-            href="https://twitter.com/gtliuu"
+            href='https://twitter.com/gtliuu'
             isExternal
-            color="blue.400"
+            color='blue.400'
             _hover={{ textDecoration: 'underline' }}
           >
             Twitter
           </Link>
           ,{' '}
           <Link
-            href="https://github.com/guitaoliu"
+            href='https://github.com/guitaoliu'
             isExternal
             _hover={{ textDecoration: 'underline' }}
           >
@@ -71,19 +70,19 @@ const Profile = () => {
           </Link>{' '}
           and{' '}
           <Link
-            href="https://www.linkedin.com/in/guitaoliu/"
+            href='https://www.linkedin.com/in/guitaoliu/'
             isExternal
-            color="cyan.500"
+            color='cyan.500'
             _hover={{ textDecoration: 'underline' }}
           >
             Linkedin
           </Link>
           . He is also reachable via{' '}
-          <Link href="mailto:gtliu52@gmail.com" color="gray.500">
+          <Link href='mailto:gtliu52@gmail.com' color='gray.500'>
             Personal
           </Link>{' '}
           or{' '}
-          <Link href="mailto:guitao.liu@uottawa.ca" color="teal.500">
+          <Link href='mailto:guitao.liu@uottawa.ca' color='teal.500'>
             School
           </Link>{' '}
           email.

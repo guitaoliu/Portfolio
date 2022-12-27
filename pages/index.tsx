@@ -13,12 +13,12 @@ const Home: NextPage = () => {
         <title>Guitao Liu</title>
       </Head>
       <VStack
-        h="full"
+        h='full'
         maxW={{ base: '70%', md: '60%' }}
-        m="auto"
+        m='auto'
         pt={5}
-        alignItems="center"
-        justifyContent="space-between"
+        alignItems='center'
+        justifyContent='space-between'
       >
         <Navbar />
         <Profile />
